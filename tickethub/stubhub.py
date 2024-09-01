@@ -72,8 +72,9 @@ def get_event(
     else:
         response.raise_for_status()
     
+        
 
-def main()->None:
+if __name__ == '__main__':
     get_event(q="concert",
             dateLocal="2024-08-31T00:00:00Z",
             page=1,
@@ -85,11 +86,7 @@ def main()->None:
             longitude=-122.4194,
             max_distance_in_meters=5000,
             genre_id=1,
-            exclude_parking_passes=True)    
-
-if __name__ == '__main__':
-    main()
-
+            exclude_parking_passes=True)
 
 # q	
 # string or null
